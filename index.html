@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mundo Salchicha 🌭</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">🌭 Mundo Salchicha</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#caracteristicas">Características</a>
+      <a href="#galeria">Galería</a>
+      <a href="#curiosidades">Curiosidades</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h1>El perro más<br/><span>adorable</span> del mundo</h1>
+      <p>Conoce todo sobre el Dachshund, el campeón de los corazones con sus patitas cortas y personalidad gigante.</p>
+      <button onclick="mostrarSaludo()">¡Conoce más! 🐾</button>
+    </div>
+    <div class="hero-dog">🐶</div>
+  </section>
+
+  <!-- MENSAJE DINÁMICO -->
+  <div id="saludo-box" class="saludo-box hidden"></div>
+
+  <!-- CARACTERÍSTICAS -->
+  <section class="caracteristicas" id="caracteristicas">
+    <h2>¿Por qué los amamos?</h2>
+    <div class="cards">
+      <div class="card">
+        <span>❤️</span>
+        <h3>Leales</h3>
+        <p>Se apegan profundamente a sus dueños. Son compañeros de vida incondicionales.</p>
+      </div>
+      <div class="card">
+        <span>🎭</span>
+        <h3>Dramáticos</h3>
+        <p>Tienen una personalidad enorme. Si no les das atención, ¡te lo harán saber!</p>
+      </div>
+      <div class="card">
+        <span>🦴</span>
+        <h3>Valientes</h3>
+        <p>Fueron criados para cazar tejones. Son pequeños pero de espíritu feroz.</p>
+      </div>
+      <div class="card">
+        <span>🛋️</span>
+        <h3>Hogareños</h3>
+        <p>Aman los sofás, las mantas y acurrucarse contigo. El placer en estado puro.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA (emojis como placeholders) -->
+  <section class="galeria" id="galeria">
+    <h2>Galería Salchicha</h2>
+    <div class="galeria-grid">
+      <div class="galeria-item" onclick="verFoto(this)">🐶</div>
+      <div class="galeria-item" onclick="verFoto(this)">🐕</div>
+      <div class="galeria-item" onclick="verFoto(this)">🦮</div>
+      <div class="galeria-item" onclick="verFoto(this)">🐾</div>
+      <div class="galeria-item" onclick="verFoto(this)">🐶</div>
+      <div class="galeria-item" onclick="verFoto(this)">🌭</div>
+    </div>
+    <p id="foto-msg" class="foto-msg"></p>
+  </section>
+
+  <!-- CURIOSIDADES -->
+  <section class="curiosidades" id="curiosidades">
+    <h2>Curiosidades 🐾</h2>
+    <div id="curiosidad-texto" class="curiosidad-box">
+      Haz clic en el botón para descubrir algo nuevo...
+    </div>
+    <button class="btn-curiosidad" onclick="nuevaCuriosidad()">¡Sorpréndeme! 🎲</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Hecho con ❤️ para los amantes del Dachshund · 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,9 +1,9 @@
 <?php
-$host      = "localhost";
+$host      = "postgres.railway.internal";
 $puerto    = "5432";
-$basedatos = "perros_salchicha";
-$usuario   = "mi_usuario";
-$password  = "123456";
+$basedatos = "railway";
+$usuario   = "postgres";
+$password  = "YOqYsUzTdXJMqrTZbextWWHntzgBFptc";
 
 $conexion = pg_connect("host=$host port=$puerto dbname=$basedatos user=$usuario password=$password");
 

@@ -1,11 +1,12 @@
-FROM php:8.3-apache
+FROM php:8.3-fpm-alpine
 
-RUN apt-get update \
-    && apt-get install -y libpq-dev \
-    && docker-php-ext-install pgsql pdo_pgsql \
-    && a2dismod mpm_event \
-    && a2enmod mpm_prefork rewrite
+RUN apk add --no-cache nginx libpq-dev \
+    && docker-php-ext-install pgsql pdo_pgsql
 
 COPY . /var/www/html/
 
+COPY nginx.conf /etc/nginx/nginx.conf
+
 EXPOSE 80
+
+CMD sh -c "php-fpm -D && nginx -g 'daemon off;'"

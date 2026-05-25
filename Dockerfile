@@ -1,10 +1,7 @@
-FROM php:8.3-cli
+FROM php:8.3-apache
 
 RUN docker-php-ext-install pgsql pdo_pgsql
 
-WORKDIR /app
-COPY . .
+COPY . /var/www/html/
 
-EXPOSE 8080
-
-CMD ["php", "-S", "0.0.0.0:8080"]
+EXPOSE 80

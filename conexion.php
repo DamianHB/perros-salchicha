@@ -2,7 +2,7 @@
 $host      = getenv('PGHOST')     ?: 'postgres.railway.internal';
 $puerto    = getenv('PGPORT')     ?: '5432';
 $basedatos = getenv('PGDATABASE') ?: 'Ferrocarril';
-$usuario   = getenv('PGUSER')     ?: 'Postgres';
+$usuario   = getenv('PGUSER')     ?: 'postgres';
 $password  = getenv('PGPASSWORD') ?: 'YOqYsUzTdXMMqrTZbextWHntzgBptc';
 
 $conexion = pg_connect("host=$host port=$puerto dbname=$basedatos user=$usuario password=$password");
